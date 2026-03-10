@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jogo de Cliques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Cliques</h1>
+        
+        <div id="contador">Cliques: 0</div>
+
+        
+        <div id="mensagem">Aguardando seu primeiro clique...</div>
+        <p id="themeCounter">Temas utilizados: 0</p>
+        <div class="button-group">
+            <button id="meuBotao">Clique Aqui!</button>
+            <button id="resetar">Resetar</button>
+            <button id="limpar">Limpar Tudo</button>
+            <button id="toggleTema">Trocar Tema</button>
+            <button id="clearThemeHistory">Limpar histórico</button>
+        </div>
+
+        <div class="theme-history-section">
+            <h3>Histórico de Temas</h3>
+            <ul id="themeHistory"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

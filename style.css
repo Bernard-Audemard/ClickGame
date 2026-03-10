@@ -1,0 +1,146 @@
+/* style.css */
+
+:root {
+  --background-light: #f0f2f5;
+  --text-light: #333;
+  --button-bg-light: #007bff;
+  --button-text-light: white;
+  --button-hover-light: #0056b3;
+  --border-light: #ccc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+  --background-light: #282c34;
+  --text-light: #e0e0e0;
+  --button-bg-light: #61dafb;
+  --button-text-light: #282c34;
+  --button-hover-light: #21a1f1;
+  --border-light: #555;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-theme .container {
+  background-color: #3a3f4a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+#mensagem {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  min-height: 2em; /* Para evitar que o layout salte */
+}
+
+#contador {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.buttonThemeClear {
+  background-color: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 5px 10px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg-light);
+  color: var(--button-text-light);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  flex-grow: 1;
+  max-width: 180px;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--button-hover-light);
+  transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.theme-history-section {
+  margin-top: 30px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+}
+
+.theme-history-section h3 {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+#themeHistory {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#themeHistory li {
+  background-color: var(--border-light);
+  color: var(--text-light);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+body.dark-theme #themeHistory li {
+  background-color: #555;
+  color: #e0e0e0;
+}
